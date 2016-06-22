@@ -3,8 +3,7 @@ haiku <- function(debug = F){
   linelengths <- c(5,7,5)
   
   #load files#
-  wordlist <- read.csv("//chse.ohusu"
-                       "H:/Haiku/wordlist.csv")
+  wordlist <- read.csv("https://raw.githubusercontent.com/thameath/Haiku-Function/master/wordlist.csv")
   
   for(i in 1:length(linelengths)){
     
