@@ -52,13 +52,13 @@ haiku <- function(debug = F){
                   "")
     
     if(!grepl("s$",noun) | grepl("ss$",noun)){
-      if(!grepl("s$", verb)){
+      if(!grepl("s$", verb) & !grepl("y$",verb)){
         verb <- gsub("$","s",verb)
       }
       
-      #if(grepl("ss$", verb)){
-      #  verb <- gsub("ss$","sses",verb)
-      #}
+      if(grepl("y$",verb)){
+        verb <- gsub("y$","ies",verb)
+      }
     }
     
     if(grepl("s$",noun) & !grepl("ss$",noun)){
@@ -67,9 +67,15 @@ haiku <- function(debug = F){
       #  verb <- gsub("es$","",verb)
       #}
       
+      if(grepl("ies$", verb)){
+        verb <- gsub("ies$","y",verb)
+      }
+      
       if(grepl("s$", verb) | !grepl("ss$",verb)){
         verb <- gsub("s$","",verb)
       }
+      
+
       
     }
     
