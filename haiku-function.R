@@ -52,7 +52,7 @@ haiku <- function(debug = F){
                   "")
     
     if(!grepl("s$",noun) | grepl("ss$",noun)){
-      if(!grepl("s$", verb) & !grepl("y$",verb)){
+      if(!grepl("[es]$", verb) & !grepl("y$",verb)){
         verb <- gsub("$","s",verb)
       }
       
@@ -71,7 +71,7 @@ haiku <- function(debug = F){
         verb <- gsub("ies$","y",verb)
       }
       
-      if(grepl("s$", verb) | !grepl("ss$",verb)){
+      if(grepl("s$", verb) | !grepl("[es]s$",verb)){
         verb <- gsub("s$","",verb)
       }
       
